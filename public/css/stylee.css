@@ -1,14 +1,12 @@
-nav ul li {
-    font-weight: bold;
-}
+
 
 nav a {
     font-weight: bold;
 }
 
 nav ul li:hover {
-    background-color: black;
-    opacity: 0.8;
+    background-color: #0d6efd;
     border-radius: 17px;
-    text-decoration: underline;
+    color: aliceblue;
+
 }

@@ -1,7 +1,7 @@
 {{-- Navbar --}}
-<nav class="navbar navbar-expand-lg bg-light bg-gradient navbar-light">
+<nav class="navbar navbar-expand-lg bg-light bg-gradient">
     <div class="container">
-        <a class="navbar-brand" href="/"><img src="img/logo.png" width="70" alt="" data-aos="flip-left"
+        <a class="navbar-brand" href="/"><img src="img/logo.png" width="40" alt="" data-aos="flip-left"
                 data-aos-duration="2000"> SIFOLIS </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

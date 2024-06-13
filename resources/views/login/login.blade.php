@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="container" style="height: 72vh">
             <br>
-            <div class="row mt-5 text-center mb-5">
+            <div class="row text-center mb-5">
                 {{-- Alert --}}
                 <div class="col-lg-4 offset-lg-4 mb-3">
                     @if(session()->has('success'))

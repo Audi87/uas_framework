@@ -12,18 +12,17 @@ html, body {
 
 }
 
-nav ul li {
-    font-weight: bold;
-}
+
 
 nav a {
     font-weight: bold;
 }
 
 nav ul li:hover {
-    background-color: orangered;
-
+    background-color: #0d6efd;
     border-radius: 17px;
+    color: aliceblue;
+
 
 }
 
@@ -48,9 +47,6 @@ nav {
     min-height: 100vh; /* 100% dari tinggi viewport */
 }
 
-.btn{
-    color: blue;
-}
 
 .regis{
     height: 100vh;

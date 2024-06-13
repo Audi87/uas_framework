@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Barang;
 use App\Models\Peminjaman;
 use App\Models\PeminjamanDetail;
@@ -23,7 +24,7 @@ class PeminjamanController extends Controller
         $tanggal = Carbon::now();
 
         // Cek jika jumlah pinjaman lebih besar dari stok u
-        if($request['jumlahPinjaman'] > $barang->stok){
+        if ($request['jumlahPinjaman'] > $barang->stok) {
             return redirect('/peminjaman/' . $barang->id)->with('success', 'stock not available');
         }
 
@@ -35,7 +36,7 @@ class PeminjamanController extends Controller
 
         // Cek jika user id sudah ada dalam tabel peminajamn ntuk table peminjaman
         $cekUser = Peminjaman::where('user_id', auth()->user()->id)->first();
-        if(empty($cekUser)){
+        if (empty($cekUser)) {
             // Proses tambah ke tabel peminjaman
             $peminjamanInsert = [
                 'user_id' => auth()->user()->id,
@@ -43,22 +44,22 @@ class PeminjamanController extends Controller
                 'jumlah_pinjaman' => $request->jumlahPinjaman,
                 'status' => '1'
             ];
-        Peminjaman::create($peminjamanInsert);
-        }else{
+            Peminjaman::create($peminjamanInsert);
+        } else {
             // Proses update tabel peminjaman
             $peminjamanUpdate = [
                 'tanggal' => date($tanggal),
                 'jumlah_pinjaman' => $cekUser->jumlah_pinjaman + $request->jumlahPinjaman,
                 'status' => '1'
             ];
-        Peminjaman::where('id', $cekUser->id)->update($peminjamanUpdate);
+            Peminjaman::where('id', $cekUser->id)->update($peminjamanUpdate);
         }
 
 
         // Cek jika user id sudah ada dalam tabel peminajamn ntuk table peminjamanDEtail
         $cekUser = Peminjaman::where('user_id', auth()->user()->id)->first();
         $peminjamanDetail = PeminjamanDetail::where('barang_id', $barang->id)->where('peminjaman_id', $cekUser->id)->first();
-        if(empty($peminjamanDetail)){
+        if (empty($peminjamanDetail)) {
             // proses tamabh ke tabel peminjaman detail
             $peminajamanDetailInsert = [
                 'peminjaman_id' => $cekUser->id,
@@ -66,7 +67,7 @@ class PeminjamanController extends Controller
                 'jumlah' => $request->jumlahPinjaman
             ];
             PeminjamanDetail::create($peminajamanDetailInsert);
-        }else{
+        } else {
             $peminjamanDetailUpdate = [
                 'jumlah' => $peminjamanDetail->jumlah + $request->jumlahPinjaman
             ];
@@ -108,7 +109,7 @@ class PeminjamanController extends Controller
         return view('history.detailPinjaman', [
             'title' => 'Detail Peminjaman ' . auth()->user()->username,
             'total' => Peminjaman::where('id', $id)->first(),
-            'details' => PeminjamanDetail::where('peminjaman_id',$id)->get()
+            'details' => PeminjamanDetail::where('peminjaman_id', $id)->get()
         ]);
     }
 

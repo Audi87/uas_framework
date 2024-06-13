@@ -1,7 +1,11 @@
 @extends('dashboard.layouts.main')
 
 @section('content')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="sweetalert2.all.min.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 <div class="container">
 
     <div class="row py-3">
@@ -86,7 +90,7 @@
                                 <form action="/sarana-prasarana/{{ $barang->id }}" method="post" class="d-inline">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="badge bg-danger border-0" onclick="return confirm('re you sure you want to delete data?')"><span data-feather="delete"></span></button>
+                                    <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Are you sure you want to delete data?')"><span data-feather="delete"></span></button>
                                 </form>
                             </td>
                         </tr>
@@ -113,5 +117,44 @@
     </div>
 
 </div>
-
+{{-- gawe notif gagal --}}
+@if ($message = Session::get('gagal'))
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+    Toast.fire({
+        icon: "error",
+        title: '{{ $message }}'
+    });
+</script>
+@endif
+{{-- gawe notif sukses --}}
+@if ($message = Session::get('success'))
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+    Toast.fire({
+        icon: "success",
+        title: '{{ $message }}'
+    });
+</script>
+@endif
 @endsection

@@ -81,6 +81,47 @@
         AOS.init();
     </script>
 
+
+{{-- gawe notif gagal --}}
+@if ($message = Session::get('gagal'))
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+    Toast.fire({
+        icon: "error",
+        title: '{{ $message }}'
+    });
+</script>
+@endif
+{{-- gawe notif sukses --}}
+@if ($message = Session::get('success'))
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+    Toast.fire({
+        icon: "success",
+        title: 'TES'
+    });
+</script>
+@endif
 </body>
 
 </html>

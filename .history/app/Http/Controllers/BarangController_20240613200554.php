@@ -66,7 +66,7 @@ class BarangController extends Controller
         }
 
         Barang::create($validasiData);
-        return redirect('/sarana-prasarana')->with('success', 'infrastructure data has been successfully added');
+        return redirect('/sarana-prasarana')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**

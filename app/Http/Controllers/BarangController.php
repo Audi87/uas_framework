@@ -66,7 +66,7 @@ class BarangController extends Controller
         }
 
         Barang::create($validasiData);
-        return redirect('/sarana-prasarana')->with('success', 'infrastructure data has been successfully added');
+        return redirect('/sarana-prasarana')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -129,10 +129,6 @@ class BarangController extends Controller
             $validasiData['image'] = $request->file('image')->store('public/post-image');
         }
 
-
-
-
-
         $barang->update($validasiData);
         return redirect('/sarana-prasarana')->with('success', 'infrastructure has been successfully changed');
     }
@@ -152,6 +148,6 @@ class BarangController extends Controller
         }
 
         $barang->delete();
-        return redirect('/sarana-prasarana')->with('success', 'data deleted successfully');
+        return redirect('/sarana-prasarana')->with('hapus', 'data deleted successfully');
     }
 }

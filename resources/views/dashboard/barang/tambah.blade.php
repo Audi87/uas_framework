@@ -1,7 +1,11 @@
 @extends('dashboard.layouts.main')
 
 @section('content')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="sweetalert2.all.min.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 <div class="container">
 
     <div class="row py-3">
@@ -25,7 +29,6 @@
                         @endforeach
                     </select>
                 </div>
-
 
                 <div class="mb-2">
                     <label for="nama_barang" class="form-label">Fasilitas</label>
@@ -70,4 +73,60 @@
 
 </div>
 
+{{-- gawe notif gagal --}}
+@if ($message = Session::get('gagal'))
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+    Toast.fire({
+        icon: "error",
+        title: '{{ $message }}'
+    });
+</script>
+@endif
+{{-- gawe notif sukses --}}
+@if ($message = Session::get('success'))
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+    Toast.fire({
+        icon: "success",
+        title: '{{ $message }}'
+    });
+</script>
+@endif
 @endsection
+
+<script>
+    function previewImage() {
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+
+        imgPreview.style.display = 'block';
+
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        };
+    }
+</script>

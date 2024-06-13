@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-fluid {
+     /* Pastikan kontainer memiliki tinggi minimal 100% dari tinggi viewport */
+    height: 100px;
+}
+
+nav ul li {
+    font-weight: bold;
+}
+
+nav a {
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background-color: orangered;
+
+    border-radius: 17px;
+
+}
+
+nav {
+    position: absolute;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px; /* Optional: Adds space between the images */
+    align-items: center; /* Optional: Aligns images vertically if they are of different sizes */
+}
+
+.full-height {
+    min-height: 100vh; /* 100% dari tinggi viewport */
+}
+
+.btn{
+    color: blue;
+}

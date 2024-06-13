@@ -19,7 +19,10 @@
     <div class="row py-5">
         <div class="col-lg-8 offset-lg-2">
             <div class="card mb-3">
-                <a href="{{ asset('storage/' . $barang->image) }}" target="_blank"><img src="{{ asset('storage/' . $barang->image) }}" class="card-img-top " alt="{{ $title }}" height="400" data-aos="flip-left" data-aos-duration="2000"></a>
+                <a href="{{ asset('storage/' . str_replace('public/', '', $barang->image)) }}" target="_blank">
+                    <img src="{{ asset('storage/' . str_replace('public/', '', $barang->image)) }}" width="150px"
+                        title="{{ $barang->nama_barang }}">
+                </a>
                 <div class="card-body">
                   <div class="row">
                     <div class="col-lg-8">

@@ -31,7 +31,11 @@
                             <td>{{ $detail->barang->nama_barang }}</td>
                             <td>{{ $detail->barang->category->category }}</td>
                             <td>{{ $detail->jumlah }}</td>
-                            <td><a href="{{ asset('storage/' . $detail->barang->image) }}" target="_blank"><img src="{{ asset('storage/' . $detail->barang->image) }}" alt="" width="50" title="{{ $detail->barang->nama_barang }}"></a></td>
+                            <td>
+                                <a href="{{ asset('storage/' . str_replace('public/', '', $detail->barang->image)) }}" target="_blank">
+                                    <img src="{{ asset('storage/' . str_replace('public/', '', $detail->barang->image)) }}" width="50px" title="{{ $detail->barang->nama_barang }}">
+                                </a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

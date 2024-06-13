@@ -28,7 +28,7 @@
         <div class="container1">
 
             <div class="row py-3 text-center">
-                <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-12 mt-3">
+                <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-12 ">
                     @if (session()->has('success'))
                         {{-- Alert --}}
                         <div class="alert alert-success" role="alert">
@@ -40,16 +40,14 @@
             </div>
 
             <div class="row py-3 text-center text-white">
-                <div class="col-lg-12 mt-3">
+                <div class="col-lg-12">
                     <h2>SIFOLIS</h2>
                     <h3>Sistem Informasi Logistik</h3>
                 </div>
             </div>
-
-
-
-            <div class="row text-white text-center d-flex justify-content-center mt-5">
+            <div class="row text-white text-center d-flex justify-content-center ">
                 <div class="col-lg-8">
+                    <img  data-aos="flip-left" data-aos-duration="1000" src="img/pngwing.com (7).png" width="150px" alt="" style="align-items: center">
                     <h1>Peminjaman Barang dan Ruangan<h1>
                             <n>Sistem Informasi Logistik Telkom University
                         </h1>
@@ -57,7 +55,7 @@
                 </div>
             </div>
 
-            <div class="row py-3 text-center mt-5" data-aos="flip-left" data-aos-duration="2000">
+            <div class="row py-3 text-center mt-5" >
                 <div class="col-lg-12">
                     <a href="sarana dan prasarana" class="btn btn-light ">Sarana dan Prasarana</a>
                 </div>

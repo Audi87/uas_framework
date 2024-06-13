@@ -11,7 +11,7 @@
                     Sign Up
                 </h2>
             </div>
-            <div class="col-lg-4 offset-lg-4 col-10 offset-1 mt-3">
+            <div class="col-lg-4 offset-lg-4 col-10 offset-1 mt-">
                 {{-- Form Registrasi --}}
                 <div class="card">
                     <div class="card-body">

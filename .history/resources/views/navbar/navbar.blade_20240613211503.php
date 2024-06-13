@@ -1,5 +1,5 @@
 {{-- Navbar --}}
-<nav class="navbar navbar-expand-lg bg-light bg-gradient navbar-light">
+<nav class="navbar navbar-expand-lg bg-light bg navbar-light">
     <div class="container">
         <a class="navbar-brand" href="/"><img src="img/logo.png" width="70" alt="" data-aos="flip-left"
                 data-aos-duration="2000"> SIFOLIS </a>

@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="regis p-3 mb-2 bg-primary text-white">
-    <div class="container-fluid py-5">
+<div class="p-3 mb-2 bg-primary text-white">
+    <div class="container py-5">
         <div class="row text-center mb-5">
             <div class="col-lg-4 offset-lg-4" >
                 <h2>

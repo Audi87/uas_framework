@@ -37,9 +37,9 @@
 
             <div class="row mb-3 text-center text-white gx-1">
                 @foreach ($categories as $category)
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                    <div class="col-lg-1 col-md-3 col-sm-1 col-6">
                         <a href="/category/{{ $category->id }}" class="text-decoration-none text-white">
-                            <div class="card bg-primary p-2">
+                            <div class="card bg-primary p-4">
                                 <h3>{{ $category->category }}</h3>
                             </div>
                         </a>

@@ -65,7 +65,7 @@
                                 </div>
                                 @enderror
                             </div>
-                            <div class="mb-4">
+                            <div class="mb-400">
                                 <button class="btn btn-outline-primary w-100" type="submit">REGISTRASTION</button>
                             </div>
                             <div>

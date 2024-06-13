@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <form action="/registrasi" method="post">
                             @csrf
-                            <div class="mb-1">
+                            <div class="mb-10">
                                 <input type="text" id="name" name="name" placeholder="Name..." value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror">
                                 @error('name')
                                 <div class="invalid-feedback">

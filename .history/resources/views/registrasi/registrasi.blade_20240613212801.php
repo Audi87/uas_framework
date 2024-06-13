@@ -66,7 +66,7 @@
                                 @enderror
                             </div>
                             <div class="mb-4">
-                                <button class="btn btn-outline-primary w-100" type="submit">REGISTRASTION</button>
+                                <button class="btn btn-outline-primary w-10" type="submit">REGISTRASTION</button>
                             </div>
                             <div>
                                 <p><small>already have an account? <a href="login" class="text-decoration-none">Login</a></small></p>

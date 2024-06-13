@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container-fluid">
+    <div class="container-fluid bg-primary bg-gradient">
         <div class="container">
 
             <div class="row mt-3 py-3">
@@ -39,7 +39,7 @@
                 @foreach ($categories as $category)
                     <div class="col-lg-3 col-md-3 col-sm-3 col-3">
                         <a href="/category/{{ $category->id }}" class="text-decoration-none text-white">
-                            <div class="card bg-primary p-2">
+                            <div class="card bg-primary p-4">
                                 <h3>{{ $category->category }}</h3>
                             </div>
                         </a>

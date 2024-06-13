@@ -7,7 +7,7 @@
         <div class="row text-center mb-5">
             <div class="col-lg-4 offset-lg-4" >
                 <h2>
-                    <img src="img/pngwing.com (7).png" text-primary width="50" alt="" data-aos="flip-left" data-aos-duration="2000" >
+                    <img src="img/pngwing.com (7).png" text-primary width="70" alt="" data-aos="flip-left" data-aos-duration="2000" >
                     Sign Up
                 </h2>
             </div>

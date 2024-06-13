@@ -6,7 +6,7 @@
         <div class="container">
 
             <div class="row mt-3 py-3">
-                <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-12">
+                <div class="col-lg-28 offset-lg-20 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-12">
                     {{-- Form Search --}}
                     <form action="" method="get">
                         <div class="input-group mb-3">
@@ -37,9 +37,9 @@
 
             <div class="row mb-3 text-center text-white gx-1">
                 @foreach ($categories as $category)
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                         <a href="/category/{{ $category->id }}" class="text-decoration-none text-white">
-                            <div class="card bg-primary p-2">
+                            <div class="card bg-primary p-4">
                                 <h3>{{ $category->category }}</h3>
                             </div>
                         </a>

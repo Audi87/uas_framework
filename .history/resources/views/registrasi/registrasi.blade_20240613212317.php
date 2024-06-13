@@ -5,7 +5,7 @@
 <div class="regis p-3 mb-2 bg-primary text-white">
     <div class="container-fluid py-5">
         <div class="row text-center mb-5">
-            <div class="col-lg-4 offset-lg-4" >
+            <div class="col-lg- offset-lg-25" >
                 <h2>
                     <img src="img/pngwing.com (7).png" text-primary width="50" alt="" data-aos="flip-left" data-aos-duration="2000" >
                     Sign Up
